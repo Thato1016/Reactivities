@@ -7,6 +7,8 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
+  const [selectActivity, setSelectedtActivity] = useState<Activity | undefined>(undefined);
+  const [editMode, setEditMode] =useState(false);
 
   const [selectedActivity, setSelectedActivity] = useState<Activity | undefined>(undefined);
 
@@ -21,6 +23,7 @@ function App() {
   }, [])
 
   function handleSelectActivity(id: string) {
+<<<<<<< HEAD
 
     setSelectedActivity(activities.find(x => x.id === id));
   }
@@ -31,6 +34,10 @@ function App() {
     setSelectedtActivity(activities.find(x => x.id === id));
     setEditMode(true);
 
+=======
+    setSelectedtActivity(activities.find(x => x.id === id));
+    setEditMode(true);
+>>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
   }
   
 function handleCancelSelectActivity() {
@@ -50,11 +57,14 @@ function handleFormClose() {
     <NavBar openForm={handleFormOpen} />
     <Container style={{marginTop: '7em'}}>
       <ActivityDashboard 
+<<<<<<< HEAD
 <<<<<<< HEAD        activities= {activities}
         selectedActivity={selectedActivity}
         selectActivity={handleSelectActivity}
         cancelSelectActivity={handleCancelSelectActivity}
 
+=======
+>>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
       activities= {activities}
       selectedActivity={selectActivity}
       selectActivity={handleSelectActivity}
@@ -63,7 +73,10 @@ function handleFormClose() {
       openForm={handleFormOpen}
       closeForm={handleFormClose}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
       />
     </Container>
     </>

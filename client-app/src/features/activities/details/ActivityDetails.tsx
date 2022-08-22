@@ -6,6 +6,7 @@ interface Props {
     activity: Activity;
     cancelSelectActivity: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 export default function ActivityDetails({activity, cancelSelectActivity }: Props) {
@@ -27,6 +28,8 @@ export default function ActivityDetails({activity, cancelSelectActivity }: Props
         <Button onClick={cancelSelectActivity} basic color='grey' content='Cancel' />
       </Button.Group>
 =======
+=======
+>>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
     openForm: (id: string) => void;
 }
 
@@ -48,6 +51,9 @@ export default function ActivityDetails({activity, cancelSelectActivity, openFor
                 <Button onClick={() => openForm(activity.id)} basic color='blue' content='edit' />
                 <Button onClick={cancelSelectActivity} basic color='grey' content='cancel' />
             </Button.Group>
+<<<<<<< HEAD
+>>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
+=======
 >>>>>>> 004f916e3806028d99e2ac780b01c38e6280e6b8
     </Card.Content>
   </Card>
