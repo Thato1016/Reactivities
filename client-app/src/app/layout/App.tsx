@@ -18,7 +18,6 @@ function App() {
 
   function handleSelectActivity(id: string) {
     setSelectedtActivity(activities.find(x => x.id === id));
-    setEditMode(true);
   }
   
 function handleCancelSelectActivity() {
@@ -27,6 +26,7 @@ function handleCancelSelectActivity() {
 
 function handleFormOpen(id?: string) {
   id ? handleSelectActivity(id) : handleCancelSelectActivity();
+  setEditMode(true);
 }
 
 function handleFormClose() {
